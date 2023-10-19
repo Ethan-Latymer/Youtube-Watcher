@@ -9,6 +9,9 @@ function onYouTubeIframeAPIReady() {
         if (ID.includes("=")) {
             ID = ID.slice(ID.indexOf("=") + 1, ID.indexOf("=") + 12)
         }
+        else if (ID.length > 12) {
+            ID = ID.slice(0, 11);
+        }
     
         if (player == null) {
             player = new YT.Player('player', {
