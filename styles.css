@@ -17,7 +17,6 @@ html {
 }
 
 iframe {
-    aspect-ratio: 16 / 9;
     border-radius: 10px;
     box-shadow: 1px 1px 12px 5px black;
 }
@@ -83,12 +82,14 @@ iframe {
 
 @media (max-aspect-ratio: 16 / 9) {
     iframe {
-        width: 80vw;
+        width: 80vw !important;
+        height: 45vw !important;
     }
 }
 
 @media (min-aspect-ratio: 16 / 9) {
     iframe {
-        height: 80vh;
+        height: 80vh !important;
+        width: 142vh !important;
     }
 }
