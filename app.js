@@ -3,8 +3,15 @@ const iframeCont = document.getElementById("iframe-container");
 const submitBtn = document.getElementById("submit-label");
 var player = null;
 
+IDform.addEventListener("submit", (event) => {
+    event.preventDefault();
+});
+
+
 function onYouTubeIframeAPIReady() {
-    IDform.addEventListener("submit", (event) => {        
+    IDform.addEventListener("submit", (event) => {   
+        event.preventDefault();
+
         let ID = IDform["ID"].value;
         if (ID.includes("=")) {
             ID = ID.slice(ID.indexOf("=") + 1, ID.indexOf("=") + 12)
@@ -41,7 +48,5 @@ function onYouTubeIframeAPIReady() {
         setTimeout(() => {
             submitBtn.classList.remove("selected");
         }, 500);
-    
-        event.preventDefault();
     });
 }
