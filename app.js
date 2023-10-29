@@ -9,6 +9,7 @@ IDform.addEventListener("submit", (event) => {
 
 
 function onYouTubeIframeAPIReady() {
+    console.log("ok");
     IDform.addEventListener("submit", (event) => {   
         event.preventDefault();
 
