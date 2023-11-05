@@ -3,11 +3,6 @@ const iframeCont = document.getElementById("iframe-container");
 const submitBtn = document.getElementById("submit-label");
 var player = null;
 
-IDform.addEventListener("submit", (event) => {
-    event.preventDefault();
-});
-
-
 function onYouTubeIframeAPIReady() {
     IDform.addEventListener("submit", (event) => {   
         event.preventDefault();
